@@ -53,7 +53,7 @@ class Application
         $request = $this->service(RequestInterface::class);
 
         if(!$route){
-            echo "Page not found";
+            echo "Ops, essa página não existe!";
             exit;
         }
 
