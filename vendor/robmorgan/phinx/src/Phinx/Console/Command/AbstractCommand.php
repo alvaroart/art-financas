@@ -212,7 +212,7 @@ abstract class AbstractCommand extends Command
             return $locator->locate($configFile, $cwd, $first = true);
         }
 
-        $possibleConfigFiles = array('phinx.php-old', 'phinx.json', 'phinx.yml');
+        $possibleConfigFiles = array('phinx.php', 'phinx.json', 'phinx.yml');
         foreach ($possibleConfigFiles as $configFile) {
             try {
                 return $locator->locate($configFile, $cwd, $first = true);

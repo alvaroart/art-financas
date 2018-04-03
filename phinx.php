@@ -1,8 +1,7 @@
 <?php
 
 require __DIR__ . '/vendor/autoload.php';
-
-$db - include __DIR__ . '/config/db.php';
+$db = include __DIR__ . '/config/db.php';
 list(
     'driver' => $adapter,
     'host' => $host,
@@ -10,8 +9,8 @@ list(
     'username' => $user,
     'password' => $pass,
     'charset' => $charset,
-    'collation' => $collation)
-    = $db['development'];
+    'collation' => $collation
+    ) = $db['default'];
 return [
     'paths' => [
         'migrations' => [
@@ -21,10 +20,10 @@ return [
             __DIR__ . '/db/seeds'
         ]
     ],
-    'enviroments' => [
+    'environments' => [
         'default_migration_table' => 'migrations',
-        'default_database' => 'development',
-        'development' => [
+        'default_database' => 'default',
+        'default' => [
             'adapter' => $adapter,
             'host' => $host,
             'name' => $name,

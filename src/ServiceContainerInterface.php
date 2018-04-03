@@ -1,7 +1,6 @@
 <?php
-declare(strict_types=1);
+declare(strict_types = 1);
 namespace ARTFin;
-
 
 interface ServiceContainerInterface
 {
@@ -12,5 +11,5 @@ interface ServiceContainerInterface
     public function get(string $name);
 
     public function has(string $name);
-
 }
+?>

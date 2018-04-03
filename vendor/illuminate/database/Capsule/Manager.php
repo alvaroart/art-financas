@@ -198,4 +198,8 @@ class Manager
     {
         return static::connection()->$method(...$parameters);
     }
+
+    public function addConection($development)
+    {
+    }
 }

@@ -4,7 +4,7 @@ use Phinx\Seed\AbstractSeed;
 
 class CategoryCostsSeeder extends AbstractSeed
 {
-     public function run()
+    public function run()
     {
         $categoryCosts = $this->table('category_costs');
 
@@ -18,11 +18,6 @@ class CategoryCostsSeeder extends AbstractSeed
                 'name' => 'Category 2',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
-            ],
-            [
-                'name' => 'Custos fixos',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date( 'Y-m-d H:i:s')
             ]
         ])->save();
     }

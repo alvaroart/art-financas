@@ -29,6 +29,21 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {% for category in categories %}
+                                    <tr>
+                                        <td>{{ category.id }}</td>
+                                        <td>{{ category.name }}</td>
+                                        <td>
+                                            <a href="#">
+                                                <span class="glyphicon glyphicon-pencil"></span>
+                                            </a>
+                                            |
+                                            <a href="#">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
                                 <tr>
                                     <td>ID</td>
                                     <td>Name</td>

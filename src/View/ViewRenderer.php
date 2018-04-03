@@ -2,28 +2,30 @@
 namespace ARTFin\View;
 
 use Psr\Http\Message\ResponseInterface;
+use Twig_Environment;
 use Zend\Diactoros\Response;
 
-class ViewRenderer implements ViewRendererInterface
+class ViewRenderer implements ViewRenderInterface
 {
     /**
-     * @var \Twig_Environment
+     * @var Twig_Environment
      */
-    private $twigEnvironment;
+    private $twigEnviroment;
 
     /**
      * ViewRenderer constructor.
      */
-    public function __construct(\Twig_Environment $twigEnvironment)
+    public function __construct(Twig_Environment $twigEnviroment)
     {
-        $this->twigEnviroment = $twigEnvironment;
+        $this->twigEnviroment = $twigEnviroment;
     }
 
     public function render(string $template, array $context = []): ResponseInterface
     {
-        $result = $this->twigEnvironment->render($template, $context);
+        $result = $this->twigEnviroment->render($template, $context);
         $response = new Response();
         $response->getBody()->write($result);
         return $response;
     }
 }
+?>

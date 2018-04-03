@@ -1,9 +1,9 @@
 {
-    "name": "alvaro/art-financas",
+    "name": "alvaro/ART-financas",
     "authors": [
         {
             "name": "Alvaro Rosa",
-            "email": "alvarorosa@id.uff.br"
+            "email": "alvaro.rosa1985@gmail.com"
         }
     ],
     "require": {
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ARTFin\\": "src/"
+            "ARTFin\\": "src"
         }
     }
 }

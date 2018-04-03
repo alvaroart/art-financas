@@ -1,13 +1,12 @@
 <?php
-
 return [
-    'development' => [
+    'production' => [
         'driver' => 'mysql',
         'host' => 'localhost',
-        'database' => 'art_financas',
+        'database' => 'financas',
         'username' => 'root',
         'password' => 'senhasenha',
         'charset' => 'utf8',
         'collation' => 'utf8_unicode_ci'
-     ]
+    ]
 ];

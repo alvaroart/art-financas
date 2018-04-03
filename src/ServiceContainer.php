@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Luiz
- * Date: 29/03/2017
- * Time: 12:09
- */
 
 namespace ARTFin;
-
 
 use Xtreamwayz\Pimple\Container;
 
@@ -18,14 +11,12 @@ class ServiceContainer implements ServiceContainerInterface
 
     /**
      * ServiceContainer constructor.
-     *
      * @param $container
      */
     public function __construct()
     {
         $this->container = new Container();
     }
-
 
     public function add(string $name, $service)
     {
@@ -47,3 +38,4 @@ class ServiceContainer implements ServiceContainerInterface
         return $this->container->has($name);
     }
 }
+?>
