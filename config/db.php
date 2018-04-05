@@ -1,6 +1,6 @@
 <?php
 return [
-    'development' => [
+    'default_connection' => [
         'driver' => 'mysql',
         'host' => 'localhost',
         'database' => 'financas',

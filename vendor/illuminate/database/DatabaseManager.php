@@ -6,6 +6,7 @@ use PDO;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
+use Illuminate\Database\MySqlConnection;
 use Illuminate\Database\Connectors\ConnectionFactory;
 
 class DatabaseManager implements ConnectionResolverInterface
