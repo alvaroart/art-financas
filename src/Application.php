@@ -5,6 +5,7 @@ namespace ARTFin;
 use ARTFin\Plugins\PluginInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use Zend\Diactoros\Response\RedirectResponse;
 use Zend\Diactoros\Response\SapiEmitter;
 
 class Application
@@ -41,12 +42,28 @@ class Application
         $routing->get($name, $path, $action);
         return $this;
     }
+    public function post ($path, $action, $name = null): Application{
+        $routing = $this->service('routing');
+        $routing->post($name, $path, $action);
+        return $this;
+    }
+
+    public function redirect($path){
+        return new RedirectResponse($path);
+    }
+
+    public function route(string $name, array $params = [])
+    {
+        $generator = $this->service('routing.generator');
+        $path = $generator->generate($name, $params);
+        return $this->redirect($path);
+    }
     public function start()
     {
         $route = $this->service('route');
         $request = $this->service(RequestInterface::class);
         if (!$route) {
-            echo "Página não encontrada...";
+            echo "Página não encontrada, preste atenção...";
             exit;
         }
         foreach ($route->attributes as $key => $value){
