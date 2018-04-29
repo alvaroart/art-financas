@@ -6,8 +6,8 @@ use ARTFin\Models\CategoryCost;
 $app
     ->get('/category-costs', function() use($app){
         $view = $app->service('view.renderer');
-        $meuModel = new CategoryCost();
-        $categories = $meuModel->all();
+        $repository = $app->service('repository.factory')->factory(CategoryCost::class);
+        $categories = $repository->all();
         return $view->render('category-costs/list.html.twig',[
             'categories' => $categories
         ]);

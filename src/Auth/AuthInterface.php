@@ -17,4 +17,6 @@ interface AuthInterface
 
     public function logout(): void;
 
+    public function hashPassword(string $password): string;
+
 }

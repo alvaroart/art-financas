@@ -32,14 +32,14 @@ class DefaultRepository implements RepositoryInterface
         $this->_model->save();
         return $this->_model;
     }
-    public function update($id, array $data)
+    public function update(int $id, array $data)
     {
         $model = $this->findInternal($id);
         $model->fill($data);
         $model->save();
         return $model;
     }
-    public function delete($id)
+    public function delete(int $id)
     {
         $model = $this->findInternal($id);
         $model->delete();

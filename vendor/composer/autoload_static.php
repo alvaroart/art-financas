@@ -42,6 +42,10 @@ class ComposerStaticInit0f2b273fdf3b9353d5a166bb47868497
             'Psr\\Container\\' => 14,
             'Phinx\\' => 6,
         ),
+        'J' => 
+        array (
+            'Jasny\\' => 6,
+        ),
         'I' => 
         array (
             'Interop\\Container\\' => 18,
@@ -49,6 +53,10 @@ class ComposerStaticInit0f2b273fdf3b9353d5a166bb47868497
             'Illuminate\\Database\\' => 20,
             'Illuminate\\Contracts\\' => 21,
             'Illuminate\\Container\\' => 21,
+        ),
+        'F' => 
+        array (
+            'Faker\\' => 6,
         ),
         'D' => 
         array (
@@ -122,6 +130,10 @@ class ComposerStaticInit0f2b273fdf3b9353d5a166bb47868497
         array (
             0 => __DIR__ . '/..' . '/robmorgan/phinx/src/Phinx',
         ),
+        'Jasny\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jasny/auth/src',
+        ),
         'Interop\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
@@ -141,6 +153,10 @@ class ComposerStaticInit0f2b273fdf3b9353d5a166bb47868497
         'Illuminate\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/container',
+        ),
+        'Faker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
         'Doctrine\\Common\\Inflector\\' => 
         array (
